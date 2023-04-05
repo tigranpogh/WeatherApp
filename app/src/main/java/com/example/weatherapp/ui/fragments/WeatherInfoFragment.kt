@@ -56,7 +56,7 @@ class WeatherInfoFragment : Fragment() {
             viewModel.getCurrentWeather(cityName)
             viewModel.getForecastWeather(cityName)
         } else {
-            initSavedNewsObservers()
+            initSavedWeatherObservers()
         }
     }
 
@@ -133,7 +133,7 @@ class WeatherInfoFragment : Fragment() {
         }
     }
 
-    private fun initSavedNewsObservers() {
+    private fun initSavedWeatherObservers() {
         viewModel.getSavedWeather().observe(viewLifecycleOwner) {
             val daysList = emptyList<String>().toMutableList()
             val tempList = emptyList<String>().toMutableList()
