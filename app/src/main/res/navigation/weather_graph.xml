@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_graph"
+    app:startDestination="@id/cityListFragment">
+
+    <fragment
+        android:id="@+id/cityListFragment"
+        android:name="com.example.weatherapp.ui.fragments.CityListFragment"
+        android:label="CityListFragment"
+        tools:layout="@layout/fragment_city_list">
+        <action
+            android:id="@+id/action_cityListFragment_to_weatherInfoFragment"
+            app:destination="@id/weatherInfoFragment"
+            app:enterAnim="@anim/anim_slide_in_left"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_right"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherInfoFragment"
+        android:name="com.example.weatherapp.ui.fragments.WeatherInfoFragment"
+        android:label="WeatherInfoFragment"
+        tools:layout="@layout/fragment_weather_info">
+
+        <argument
+            android:name="cityName"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+
+</navigation>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialogTitle">Server Problem</string>
+    <string name="dialogMessage">Service is not available now, please try later.</string>
+    <string name="temperature">Temperature : %1$s°C</string>
+    <string name="humidity">Humidity : %1$s%2$s</string>
+    <string name="forecast_for_upcoming_days">Forecast for upcoming days</string>
 </resources>
